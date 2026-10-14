@@ -8,7 +8,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 @WebServlet("/menu")
-public class PizzaController extends HttpServlet 
+public class PizzaController extends HttpServlet {
 
     @Override
     protected void doGet(
