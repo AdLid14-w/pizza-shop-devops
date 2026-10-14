@@ -1,0 +1,21 @@
+/* Pizza Shop - Dark Modern Theme */
+
+body {
+    background-color: #161616;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 30px;
+}
+
+h1 {
+    color: #ff8c00;
+}
+
+h2 {
+    color: #ffae42;
+}
+
+p {
+    line-height: 1.6;
+}
