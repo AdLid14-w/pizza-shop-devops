@@ -16,7 +16,7 @@
 
 <ul>
     <li>Margherita Pizza - $13</li>
-    <li>Pepperoni Pizza - $12</li>
+    <li>Pepperoni Pizza - $15</li>
     <li>Veggie Pizza - $11</li>
     <li>BBQ Chicken Pizza - $14</li>
 </ul>
