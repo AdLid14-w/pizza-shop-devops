@@ -8,6 +8,8 @@
     <h1>Welcome to Pizza Shop!</h1>
 
     <p>Fresh pizzas made with love.Fast delivery!</p>
+    <p>Fresh pizzas made with love. Now powered by Docker!</p>
+
 
     <h2>Our Pizza Shop</h2>
     <p>We are learning DevOps by building
