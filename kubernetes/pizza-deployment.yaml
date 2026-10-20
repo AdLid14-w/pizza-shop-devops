@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pizza-shop
+  namespace: pizza-shop
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pizza-shop
+  template:
+    metadata:
+      labels:
+        app: pizza-shop
+    spec:
+      containers:
+        - name: pizza-shop
+          image: adnaneldb/pizza-shop:6
+          ports:
+            - containerPort: 8080
