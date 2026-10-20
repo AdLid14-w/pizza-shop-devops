@@ -1,0 +1,27 @@
+---
+- name: Deploy Pizza Shop to Kubernetes
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  vars:
+    pizza_image: "adnaneldb/pizza-shop:6"
+
+  tasks:
+    - name: Update Pizza Shop Docker image
+      ansible.builtin.command:
+        cmd: >
+          kubectl set image deployment/pizza-shop
+          pizza-shop={{ pizza_image }}
+          -n pizza-shop
+      register: deploy_result
+      changed_when: "'image updated' in deploy_result.stdout"
+
+    - name: Wait for Pizza Shop to be ready
+      ansible.builtin.command:
+        cmd: kubectl rollout status deployment/pizza-shop -n pizza-shop --timeout=120s
+      changed_when: false
+
+    - name: Show deployment result
+      ansible.builtin.debug:
+        var: deploy_result.stdout
